@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes - Table Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --accent-color: #D4AF37;
+            --background-color: #404040;
+            --text-color: #FFFFFF;
+            --card-background: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #A52A2A);
+            padding: 2rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .header-title {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .tables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .table-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .table-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--shadow-color);
+        }
+
+        .table-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .table-content {
+            padding: 1.5rem;
+        }
+
+        .table-title {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .table-description {
+            color: #666666;
+            margin-bottom: 1rem;
+        }
+
+        .table-price {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .table-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666666;
+        }
+
+        .star {
+            color: var(--accent-color);
+        }
+
+        .book-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-button:hover {
+            background-color: #A52A2A;
+        }
+
+        @media (max-width: 768px) {
+            .tables-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Choose Your Perfect Table</h1>
+            <p class="header-description">Experience the perfect ambiance with our diverse selection of table options, each offering a unique dining experience.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tables-grid">
+            <!-- Standard Dining Table -->
+            <div class="table-card">
+                <img src="https://t4.ftcdn.net/jpg/10/58/11/55/240_F_1058115504_eSfr1VtHcFHL2y7zBsQGrba2iA52fp9b.jpg" alt="Standard Dining Table" class="table-image">
+                <div class="table-content">
+                    <h2 class="table-title">Standard Dining Table</h2>
+                    <p class="table-description">Comfortable seating for typical meals, suitable for small to medium groups.</p>
+                    <p class="table-price">Standard Rates Apply</p>
+                    <div class="table-rating">
+                        <span class="star">★★★★★</span>
+                        <span>4.5/5</span>
+                    </div>
+                    <a href="#" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <!-- High-Top Table -->
+            <div class="table-card">
+                <img src="https://t3.ftcdn.net/jpg/13/77/65/26/240_F_1377652656_eLCNfeINqCbgPZjdvMPznxiZyF7iOZMh.jpg" alt="High-Top Table" class="table-image">
+                <div class="table-content">
+                    <h2 class="table-title">High-Top Table</h2>
+                    <p class="table-description">Elevated seating, perfect for a casual drink or quick bite.</p>
+                    <p class="table-price">No extra charge</p>
+                    <div class="table-rating">
+                        <span class="star">★★★★☆</span>
+                        <span>4.3/5</span>
+                    </div>
+                    <a href="#" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Booth Seating -->
+            <div class="table-card">
+                <img src="https://t3.ftcdn.net/jpg/11/27/73/64/240_F_1127736439_XK5jxtnOvBiHWpbgkQF3pSfJIgE7oilm.jpg" alt="Booth Seating" class="table-image">
+                <div class="table-content">
+                    <h2 class="table-title">Booth Seating</h2>
+                    <p class="table-description">Semi-private, cozy seating along a wall, ideal for intimate meals.</p>
+                    <p class="table-price">May require minimum spend</p>
+                    <div class="table-rating">
+                        <span class="star">★★★★★</span>
+                        <span>4.7/5</span>
+                    </div>
+                    <a href="#" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Bar Seating -->
+            <div class="table-card">
+                <img src="https://t3.ftcdn.net/jpg/04/99/20/22/240_F_499202290_f0DIbaN5UiwX3cC3XNYoZe7ZvRfdQoMI.jpg" alt="Bar Seating" class="table-image">
+                <div class="table-content">
+                    <h2 class="table-title">Bar Seating</h2>
+                    <p class="table-description">Seats directly at the bar, great for solo diners or drinks.</p>
+                    <p class="table-price">Order at the bar</p>
+                    <div class="table-rating">
+                        <span class="star">★★★★☆</span>
+                        <span>4.4/5</span>
+                    </div>
+                    <a href="#" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Outdoor Seating -->
+            <div class="table-card">
+                <img src="https://t4.ftcdn.net/jpg/10/54/55/15/240_F_1054551529_vGra97Mikhgcb3Kk2ZQFWyNj6udatyKp.jpg" alt="Outdoor Seating" class="table-image">
+                <div class="table-content">
+                    <h2 class="table-title">Outdoor Seating</h2>
+                    <p class="table-description">Al fresco dining experience, subject to weather availability.</p>
+                    <p class="table-price">Same as indoor dining</p>
+                    <div class="table-rating">
+                        <span class="star">★★★★★</span>
+                        <span>4.6/5</span>
+                    </div>
+                    <a href="#" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Large Group Table -->
+            <div class="table-card">
+                <img src="https://t3.ftcdn.net/jpg/11/24/32/56/240_F_1124325686_3ZnXOvcENkwo3fi7kEVl5mTFCFlK9RRY.jpg" alt="Large Group Table" class="table-image">
+                <div class="table-content">
+                    <h2 class="table-title">Large Group Table</h2>
+                    <p class="table-description">Spacious table designed to accommodate bigger parties comfortably.</p>
+                    <p class="table-price">Booking recommended</p>
+                    <div class="table-rating">
+                        <span class="star">★★★★★</span>
+                        <span>4.5/5</span>
+                    </div>
+                    <a href="#" class="book-button">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

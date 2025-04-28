@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes - South Indian Lunch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF9A8B;
+            --accent-color: #FF6B88;
+            --background-color: #404040;
+            --text-color: #FFFFFF;
+            --card-background: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 1rem 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .recipe-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 1.5rem;
+            color: #000000;
+        }
+
+        .recipe-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #000000;
+        }
+
+        .recipe-description {
+            color: #333333;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .recipe-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .rating {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .rating::before {
+            content: "★";
+            margin-right: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Lunch menu</h1>
+    </header>
+
+    <div class="container">
+        <div class="recipe-grid">
+            
+            <!-- Mutton Biryani -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/05/70/58/72/240_F_570587233_QnGdwC3XCpDQlbJk9akBtye6BN0Y97ZA.jpg" alt="Mutton Biryani" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Mutton Biryani</h2>
+                    <p class="recipe-description">Fragrant basmati rice cooked with tender mutton pieces and aromatic spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹320</span>
+                        <span class="rating">4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chicken Biryani -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/04/59/27/88/240_F_459278894_92eSlejnR7NSwJRCbVyy9ZZibSmjbF8q.jpg" alt="Chicken Biryani" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Chicken Biryani</h2>
+                    <p class="recipe-description">Aromatic basmati rice layered with succulent chicken pieces and rich spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹280</span>
+                        <span class="rating">4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Egg Biryani -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/10/27/86/91/240_F_1027869124_Q1tVzwpg64nYoVsMdfMtj44jL6SVQ2ss.jpg" alt="Egg Biryani" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Egg Biryani</h2>
+                    <p class="recipe-description">Fragrant rice cooked with boiled eggs and a blend of aromatic spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹200</span>
+                        <span class="rating">4.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mutton Marag -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/03/90/29/41/240_F_390294136_VguOWSfQzueKagqq3SWqK1P8fubMhn02.jpg" alt="Mutton Marag" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Mutton Marag</h2>
+                    <p class="recipe-description">A rich and spicy mutton soup with tender meat pieces and aromatic spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹250</span>
+                        <span class="rating">4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Natukodi Plusu -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/04/08/06/83/240_F_408068349_i5frJjLX8cNA6h9BFg1Ci6uVvgp9sNDQ.jpg" alt="Natukodi Plusu" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Natukodi Plusu</h2>
+                    <p class="recipe-description">A traditional Andhra-style chicken curry with rich spices and authentic flavors.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹270</span>
+                        <span class="rating">4.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Veg Thali -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/03/89/19/44/240_F_389194426_JBOfnRyZlnGLk6GmMApmPiYkNumh3sxC.jpg" alt="Non-Veg Thali" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Non-Veg Thali</h2>
+                    <p class="recipe-description">A complete meal featuring chicken curry, mutton curry, biryani, curd, papad, and dessert.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹350</span>
+                        <span class="rating">4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Veg Thali -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/11/20/45/02/240_F_1120450299_9f4ia06XEV6zbfvJqV2PU2ctitwML9Y6.jpg" alt="Veg Thali" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Veg Thali</h2>
+                    <p class="recipe-description">A wholesome vegetarian meal with sambar, rasam, curries, rice, curd, papad, and dessert.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹250</span>
+                        <span class="rating">4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vegetable Biryani -->
+            <div class="recipe-card">
+                <img src="https://images.pexels.com/photos/7593267/pexels-photo-7593267.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vegetable Biryani" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Vegetable Biryani</h2>
+                    <p class="recipe-description">A fragrant rice dish cooked with mixed vegetables and aromatic spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹180</span>
+                        <span class="rating">4.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lemon Rice -->
+            <div class="recipe-card">
+                <img src="https://media.istockphoto.com/id/670526200/photo/poha-indian-snacks.jpg?b=1&s=612x612&w=0&k=20&c=lbOryJV9a9nGvurAtFKgSeGsAv_lqrmCvq6p9E-XRAE=" alt="Lemon Rice" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Lemon Rice</h2>
+                    <p class="recipe-description">Tangy and flavorful rice seasoned with lemon juice, mustard seeds, and curry leaves.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹100</span>
+                        <span class="rating">4.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curd Rice -->
+            <div class="recipe-card">
+                <img src="https://images.pexels.com/photos/29684991/pexels-photo-29684991/free-photo-of-creamy-curd-rice-in-black-ceramic-bowl.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Curd Rice" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Curd Rice</h2>
+                    <p class="recipe-description">Comforting rice mixed with yogurt and tempered with mustard seeds and curry leaves.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹90</span>
+                        <span class="rating">4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kerala Style Fish Curry -->
+            <div class="recipe-card">
+                <img src="https://images.pexels.com/photos/8684077/pexels-photo-8684077.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kerala Style Fish Curry" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Kerala Style Fish Curry</h2>
+                    <p class="recipe-description">Fish cooked in a tangy and spicy coconut-based gravy with curry leaves.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹250</span>
+                        <span class="rating">4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chicken Chettinad -->
+            <div class="recipe-card">
+                <img src="https://media.istockphoto.com/id/1258129772/photo/indian-home-made-chettinad-country-chicken-curry.jpg?b=1&s=612x612&w=0&k=20&c=w2ca2Fm7J01wEuAZSsweEX72JfkWTPpXXesC_7MalN8=" alt="Chicken Chettinad" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Chicken Chettinad</h2>
+                    <p class="recipe-description">A spicy and aromatic chicken dish from the Chettinad region of Tamil Nadu.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹280</span>
+                        <span class="rating">4.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Andhra Style Mutton Curry -->
+            <div class="recipe-card">
+                <img src="https://images.pexels.com/photos/28674568/pexels-photo-28674568/free-photo-of-delicious-indian-mutton-curry-with-bone-marrow.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Andhra Style Mutton Curry" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Andhra Style Mutton Curry</h2>
+                    <p class="recipe-description">Fiery and flavorful mutton curry from Andhra Pradesh with rich spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹320</span>
+                        <span class="rating">4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bisi Bele Bath -->
+            <div class="recipe-card">
+                <img src="https://media.istockphoto.com/id/1326815151/photo/indian-popular-food-dal-fry-or-traditional-dal-tadka-curry.jpg?b=1&s=612x612&w=0&k=20&c=cNVCsnT5J6tJnzghCRjV6gJm5KUlT8I4iiJAOvXLXjw=" alt="Bisi Bele Bath" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Bisi Bele Bath</h2>
+                    <p class="recipe-description">A hearty and spicy mixed rice dish with lentils and vegetables.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹170</span>
+                        <span class="rating">4.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tamarind Rice -->
+            <div class="recipe-card">
+                <img src="https://images.pexels.com/photos/31710628/pexels-photo-31710628/free-photo-of-delicious-spicy-seafood-risotto-on-rustic-plate.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tamarind Rice" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Tamarind Rice</h2>
+                    <p class="recipe-description">Tangy rice flavored with tamarind paste, peanuts, and aromatic spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹115</span>
+                        <span class="rating">4.1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabbage Thoran -->
+            <div class="recipe-card">
+                <img src="https://media.istockphoto.com/id/823167374/photo/fried-patta-gobhi-or-gobi-with-green-peas-sabji-or-cabbage-sabzi-is-the-traditional-indian.jpg?b=1&s=612x612&w=0&k=20&c=Dl4rCx69AQJxE9ntdAViwdvpOk5oxySS_YlUWM90xsI=" alt="Cabbage Thoran" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Cabbage Thoran</h2>
+                    <p class="recipe-description">Finely chopped cabbage stir-fried with coconut, mustard seeds, and curry leaves.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹80</span>
+                        <span class="rating">3.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avial -->
+            <div class="recipe-card">
+                <img src="https://media.istockphoto.com/id/484823350/photo/avial-south-indian-vegetable-side-dish.jpg?b=1&s=612x612&w=0&k=20&c=L6UMIacw2WbvmBiVi-S9bghgwhc-Mbr2zZHBrIeQFKo=" alt="Avial" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Avial</h2>
+                    <p class="recipe-description">A mixed vegetable curry in a coconut and yogurt base with curry leaves.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹140</span>
+                        <span class="rating">4.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sambar Rice -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/07/44/12/40/240_F_744124058_c5G9D9GbZzK91qYlICAOxWbCdzjvrYMW.jpg" alt="Sambar Rice" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Sambar Rice</h2>
+                    <p class="recipe-description">Rice mixed with the popular South Indian lentil stew, Sambar.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹105</span>
+                        <span class="rating">4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rasam Rice -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/12/46/80/56/240_F_1246805635_zspYKVygNKT7CAps1xZLd0rAzK3z27j5.jpg" alt="Rasam Rice" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Rasam Rice</h2>
+                    <p class="recipe-description">Rice mixed with the tangy and peppery South Indian soup, Rasam.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹95</span>
+                        <span class="rating">4.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parotta with Salna -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/05/42/14/67/240_F_542146774_mVd3GtEm7TTQiRqt7RzsaUvonipnzCGy.jpg" alt="Parotta with Salna" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Parotta with Salna</h2>
+                    <p class="recipe-description">Flaky flatbread served with a flavorful gravy made with onions and tomatoes.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹190</span>
+                        <span class="rating">4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kothu Parotta -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/04/48/22/02/240_F_448220244_sDh8CUQS8xvAeniSF8xPPB9AmZ6mkNwY.jpg" alt="Kothu Parotta" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Kothu Parotta</h2>
+                    <p class="recipe-description">Shredded parotta stir-fried with vegetables and spices.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹200</span>
+                        <span class="rating">4.5</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html> 

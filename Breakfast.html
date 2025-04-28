@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes - Breakfast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF9A8B;
+            --accent-color: #FF6B88;
+            --background-color: #404040;
+            --text-color: #FFFFFF;
+            --card-background: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 1rem 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .recipe-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 1.5rem;
+            color: #000000;
+        }
+
+        .recipe-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #000000;
+        }
+
+        .recipe-description {
+            color: #333333;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .recipe-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .rating {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .rating::before {
+            content: "★";
+            margin-right: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Breakfast Menu</h1>
+    </header>
+
+    <div class="container">
+        <div class="recipe-grid">
+            <!-- Recipe Card 1 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/10/80/63/52/240_F_1080635280_FWkSV9E4QEMlKXtDioxtmsiQv0bAS7js.jpg" alt="Pancakes" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Classic Pancakes</h2>
+                    <p class="recipe-description">Fluffy buttermilk pancakes served with maple syrup and fresh berries.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹250</span>
+                        <span class="rating">4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 2 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/02/75/18/84/240_F_275188407_VIsOZVgxB6VFjiwoAvfonLh4ck7ME3Ha.jpg" alt="Avocado Toast" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Avocado Toast</h2>
+                    <p class="recipe-description">Sourdough toast topped with smashed avocado, cherry tomatoes, and poached eggs.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹320</span>
+                        <span class="rating">4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 3 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/10/71/28/16/240_F_1071281622_tutYlQf5ncoYU770AbLfmclz620Mcfqo.jpg" alt="Smoothie Bowl" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Acai Smoothie Bowl</h2>
+                    <p class="recipe-description">Creamy acai base topped with granola, fresh fruits, and honey drizzle.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹280</span>
+                        <span class="rating">4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 4 -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/13/74/78/07/240_F_1374780731_nF74hSgVXb07crzBx4u9Uhjun0ixzO3b.jpg" alt="Eggs Benedict" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Eggs Benedict</h2>
+                    <p class="recipe-description">English muffin with Canadian bacon, poached eggs, and hollandaise sauce.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹350</span>
+                        <span class="rating">4.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 5 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/02/51/05/40/240_F_251054022_nGbRLuqwwinynzflVN9JLp0VclZ6w3fZ.jpg" alt="French Toast" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">French Toast</h2>
+                    <p class="recipe-description">Thick brioche slices dipped in cinnamon batter, served with fresh fruits.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹270</span>
+                        <span class="rating">4.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 6 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/13/86/34/54/240_F_1386345471_ugeNUxPyCWqg6ubkcvZpTm9328BOpuNm.jpg" alt="Breakfast Burrito" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Breakfast Burrito</h2>
+                    <p class="recipe-description">Flour tortilla filled with scrambled eggs, black beans, cheese, and salsa.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹290</span>
+                        <span class="rating">4.4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 7 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/07/64/17/62/240_F_764176246_nkMRT9nylEpEQJknFYjMcwnGMvEtcQw2.jpg" alt="Greek Yogurt Parfait" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Greek Yogurt Parfait</h2>
+                    <p class="recipe-description">Layered Greek yogurt with honey, granola, and mixed berries.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹230</span>
+                        <span class="rating">4.3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 8 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/14/08/76/50/240_F_1408765069_fY6cOk2zs8W0G9wYrdvaPjRSSo7ckMv0.jpg" alt="Breakfast Sandwich" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Breakfast Sandwich</h2>
+                    <p class="recipe-description">Toasted bagel with scrambled eggs, bacon, and cheddar cheese.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹310</span>
+                        <span class="rating">4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 9 -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/13/86/73/09/240_F_1386730966_WWN8mKQ9MTKQ3jkVAIJbeCkNjUTHExjp.jpg" alt="Oatmeal Bowl" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Oatmeal Bowl</h2>
+                    <p class="recipe-description">Steel-cut oats with cinnamon, brown sugar, and seasonal fruits.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹210</span>
+                        <span class="rating">4.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 10 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/12/11/96/70/240_F_1211967016_HSgp4fW8IWRmzsytRkVC9FKj2uzS9fSC.jpg" alt="Breakfast Tacos" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Breakfast Tacos</h2>
+                    <p class="recipe-description">Soft corn tortillas with scrambled eggs, chorizo, and fresh salsa.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹330</span>
+                        <span class="rating">4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 11 -->
+            <div class="recipe-card">
+                <img src="https://t4.ftcdn.net/jpg/12/73/35/55/240_F_1273355559_ur05UtyBHlgloTzYvFicaVlAD2EV9eHf.jpg" alt="Chia Pudding" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Chia Pudding</h2>
+                    <p class="recipe-description">Coconut milk chia pudding with mango puree and toasted coconut flakes.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹240</span>
+                        <span class="rating">4.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Card 12 -->
+            <div class="recipe-card">
+                <img src="https://t3.ftcdn.net/jpg/11/94/59/40/240_F_1194594035_uiM3JIf8H7pJIHwV3LFebTlAoSgjJRmD.jpg" alt="Breakfast Bowl" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">Breakfast Bowl</h2>
+                    <p class="recipe-description">Quinoa bowl with roasted vegetables, poached egg, and tahini dressing.</p>
+                    <div class="recipe-footer">
+                        <span class="price">₹360</span>
+                        <span class="rating">4.8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

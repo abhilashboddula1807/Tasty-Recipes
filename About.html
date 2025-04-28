@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF9A8B;
+            --accent-color: #FF6B88;
+            --background-color: #404040;
+            --text-color: #FFFFFF;
+            --card-background: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .history-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            color: #000000;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+
+        .contact-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+
+        .chefs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .chef-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+
+        .chef-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .chef-info {
+            padding: 1.5rem;
+            color: #000000;
+        }
+
+        .chef-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .chef-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .chef-bio {
+            color: #333333;
+            margin-bottom: 1rem;
+        }
+
+        .chef-specialties {
+            color: #666666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                <div class="history-content">
+                    <p>Founded in 2010, Tasty Recipes has been serving authentic Indian cuisine with a modern twist. Our journey began with a simple vision: to bring the rich flavors and traditions of Indian cooking to food lovers everywhere.</p>
+                    <p>What started as a small family restaurant has grown into a beloved culinary destination, known for our commitment to quality ingredients, traditional recipes, and innovative presentations. Our chefs combine time-honored techniques with contemporary culinary trends to create unforgettable dining experiences.</p>
+                    <p>Today, we continue to honor our roots while embracing new culinary adventures, making Tasty Recipes a place where tradition meets innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Address</h3>
+                        <p>123 Food Street</p>
+                        <p>Mumbai, Maharashtra 400001</p>
+                        <p>India</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Contact</h3>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Email: <a href="mailto:info@tastyrecipes.com">info@tastyrecipes.com</a></p>
+                        <p>Hours: 11:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.05555710489!2d72.8272153153846!3d19.07598368704438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Chefs</h2>
+                <div class="chefs-grid">
+                    <div class="chef-card">
+                        <img src="https://t3.ftcdn.net/jpg/01/06/20/40/240_F_106204059_lleqNc7r5xqH4g0Ksm8xSwUr5bh3NiJy.jpg" alt="Chef Rajesh Kumar" class="chef-image">
+                        <div class="chef-info">
+                            <h3 class="chef-name">Rajesh Kumar</h3>
+                            <p class="chef-title">Executive Chef</p>
+                            <p class="chef-bio">With over 20 years of experience in Indian cuisine, Chef Rajesh brings traditional flavors to life with modern techniques. His expertise in North Indian cuisine has earned him numerous accolades.</p>
+                            <p class="chef-specialties">Specialties: Mughlai Cuisine, Tandoori Dishes</p>
+                        </div>
+                    </div>
+
+                    <div class="chef-card">
+                        <img src="https://t3.ftcdn.net/jpg/04/97/26/32/240_F_497263209_XQ1AAWaWQbCN0m3NK7eQMd7dNzauWEY0.jpg" alt="Chef Priya Sharma" class="chef-image">
+                        <div class="chef-info">
+                            <h3 class="chef-name">Priya Sharma</h3>
+                            <p class="chef-title">Sous Chef</p>
+                            <p class="chef-bio">Chef Priya specializes in South Indian cuisine and fusion dishes. Her innovative approach to traditional recipes has made her a rising star in the culinary world.</p>
+                            <p class="chef-specialties">Specialties: South Indian Cuisine, Fusion Dishes</p>
+                        </div>
+                    </div>
+
+                    <div class="chef-card">
+                        <img src="https://t3.ftcdn.net/jpg/02/65/16/18/240_F_265161867_nUORzZ1sfwADG6RoOsCPdf81KKYQdD3G.jpg" alt="Chef Amit Patel" class="chef-image">
+                        <div class="chef-info">
+                            <h3 class="chef-name">Amit Patel</h3>
+                            <p class="chef-title">Pastry Chef</p>
+                            <p class="chef-bio">Chef Amit's passion for Indian desserts and pastries has earned him recognition as one of the best pastry chefs in the country. His creations are both visually stunning and delicious.</p>
+                            <p class="chef-specialties">Specialties: Indian Desserts, Fusion Pastries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
